@@ -1,0 +1,30 @@
+table PatronProfileList {  
+    patrons : [PatronProfile];  
+}
+
+table PatronProfile {  
+    name : string;  
+    nickname : string;
+    emails: [string];
+	addresses : [PatronAddress]; 
+    mobilePhones: [string];
+    homePhones: [string];
+    homeLibraryCode: string;	
+	preferredPickupLocationCode: string;
+    notificationPreference : PreferredNotificationChannel;   
+}  
+   
+table PreferredNotificationChannel {  
+    channel : string;   
+    preselectedPhone : string;  
+}  
+
+table PatronAddress {  
+    line1 : string;   
+    line2 : string;  
+    city : string;  
+    stateCode : string;  
+    postalCode : string;  
+} 
+   
+root_type PatronProfileList;

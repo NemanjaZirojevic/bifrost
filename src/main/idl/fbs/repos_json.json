@@ -1,0 +1,32 @@
+{
+  patrons: [
+    {
+      name: "acai",
+      nickname: "test",
+      emails: [
+        "test"
+      ],
+      addresses: [
+        {
+          line1: "test",
+          line2: "test2",
+          city: "test_city",
+          stateCode: "test_state_code",
+          postalCode: "test_postal_code"
+        }
+      ],
+      mobilePhones: [
+        "test"
+      ],
+      homePhones: [
+        "test"
+      ],
+      homeLibraryCode: "test_home_library_code",
+      preferredPickupLocationCode: "test_preferred_pickup_code",
+      notificationPreference: {
+        channel: "test_channel",
+        preselectedPhone: "test_preselected_phone"
+      }
+    }
+  ]
+}
