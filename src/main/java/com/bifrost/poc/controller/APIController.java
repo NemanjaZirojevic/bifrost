@@ -45,7 +45,7 @@ public class APIController {
   public String profileUpdateRawByteArray(@RequestBody byte[] bytes) {
     java.nio.ByteBuffer buf = java.nio.ByteBuffer.wrap(bytes);
     PatronProfile patronProfile = PatronProfile.getRootAsPatronProfile(buf);
-    log.warn("PatronProfile homeLibraryCode : ,{}",patronProfile.homeLibraryCode());
+    log.warn("PatronProfile home Library Code : ,{}",patronProfile.homeLibraryCode());
     log.warn("PatronProfile name : ,{}",patronProfile.name());
     return "test";
   }
