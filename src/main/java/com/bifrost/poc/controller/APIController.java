@@ -24,6 +24,7 @@ public class APIController {
     }
     java.nio.ByteBuffer buf = java.nio.ByteBuffer.wrap(message);
     PatronProfile patronProfile = PatronProfile.getRootAsPatronProfile(buf);
+    log.warn("PatronProfile name : ,{}",patronProfile.name());
     log.warn("PatronProfile homeLibraryCode : ,{}",patronProfile.homeLibraryCode());
     return "test";
   }
