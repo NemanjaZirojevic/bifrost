@@ -4,11 +4,17 @@ pipeline {
 		jdk 'JAVA_11'
 	}
 	stages {
-		stage('Build'){
-			steps {
-				bat "mvn clean install -DskipTests"
-			}
-		}
+		stage('Build') {
+                agent {
+                    docker {
+                        image 'neomantra/flatbuffers'
+                        reuseNode true
+                     }
+                }
+                steps {
+                    sh 'flatc -j -b repos_schema.fbs repos_json.json'
+                }
+        }
 		stage('Test'){
 			steps{
 				bat "mvn test"
